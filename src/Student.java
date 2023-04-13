@@ -1,6 +1,5 @@
-package assignment7;
 
-//TODO: Copy a working Student class from Assignment 7 over this file.
+
 public class Student {
 	private String firstName;
 	private String lastName;

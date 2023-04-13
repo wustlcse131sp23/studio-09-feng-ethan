@@ -19,9 +19,27 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> database = new HashMap<>();
+		database.put("Ethan", 67);
+		database.put("Danny", 77);
+		database.put("Nathan", 70);
+		database.put("Andy", 70);
+		database.put("Emily", 64);
+		
+		int count = 0;
+		while (count==0) {
+			System.out.println("Who's height are you looking for?");
+			String name = in.next();
+			if (name.equalsIgnoreCase("quit")) {
+				count++;
+			}
+			else if (database.get(name) == null) {
+				System.out.println("Sorry, this person doesn't exist in this database.");
+			}
+			else {
+				System.out.println(name + "'s height is " + database.get(name) + " inches.");
+			}
+		}
 
 	}
 }
